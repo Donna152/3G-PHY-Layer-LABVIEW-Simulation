@@ -1,7 +1,5 @@
 # WCDMA Digital Communication System — LabVIEW
 
-![Block Diagram](Documentation/Block_Diagram.png)
-
 ---
 
 ## Overview
@@ -38,10 +36,12 @@ A single `MT Generate Filter Coefficients.vi` block generates the RRC coefficien
 
 ## Performance Results
 
-| SNR = 0 dB | SNR = 10 dB | SNR = 20 dB | SNR = 30 dB |
-|:---:|:---:|:---:|:---:|
-| ![SNR0](Plots/Constellation_Diagram_At_SNR_0.png) | ![SNR10](Plots/Constellation_Diagram_At_SNR_10.png) | ![SNR20](Plots/Constellation_Diagram_At_SNR_20.png) | ![SNR30](Plots/Constellation_Diagram_At_SNR_30.png) |
-| Heavily scattered — high BER | Partially clustered — moderate BER | Clusters forming — low BER | Tight clusters — negligible BER |
+| SNR (dB) | Constellation | BER |
+|---|---|---|
+| 0 | Heavily scattered | High — most bits in error |
+| 10 | Partially clustered | Moderate |
+| 20 | 4 clusters forming | Low |
+| 30 | Tight, distinct clusters | Negligible — full recovery |
 
 Higher SNR → tighter constellation → lower BER → reliable data recovery.
 
